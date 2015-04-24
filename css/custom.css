@@ -16,7 +16,18 @@ ul.nav {
     background-color: #f5f5f5;
 }
 
+#back-to-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#back-to-top a {
+    color: #333;
+}
+
 footer {
+    position: relative;
     background-color: #e74c3c;
     padding: 150px 0 30px 0;
 }

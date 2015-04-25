@@ -49,6 +49,25 @@ footer {
     padding: 0 50px;
 }
 
+.jumbotron iframe {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+    background-color: #fff;
+    width: 30px;
+    opacity: 1;
+    -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+         border-radius: 30px;
+
+}
+
 .btn-lg {
     font-size: 36px;
 }

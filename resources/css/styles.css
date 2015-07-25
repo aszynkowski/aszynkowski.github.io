@@ -134,6 +134,7 @@ a:active {
     color: #555;
     border-bottom: 1px solid transparent;
     -webkit-transition: color 0.2s, border-bottom 0.2s;
+    -moz-transition: color 0.2s, border-bottom 0.2s;
     transition: color 0.2s, border-bottom 0.2s;
 }
 
@@ -169,6 +170,7 @@ input[type=submit]:active {
     background-color: #24a058;
     /* CSS3 transitions allows you to change property values smoothly  (from one value to another) */
     -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    -moz-transition: background-color 0.3s, border 0.3s, color 0.3s;
     transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 

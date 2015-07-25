@@ -125,6 +125,7 @@ a:link,
 a:visited {
     color: #27ae60;
     text-decoration: none;
+    -moz-border-bottom: 1px solid #27ae60;
     border-bottom: 1px solid #27ae60;
     padding-bottom: 1px;
 }
@@ -147,6 +148,7 @@ input[type=submit] {
     padding: 10px 30px;
     display: inline-block; /* inline-block elements are like inline elements but they can have a width and height.  */
     text-decoration: none;
+    -moz-border-radius: 100px;
     border-radius: 100px;
     border: 1px solid #27ae60;
 }
@@ -176,6 +178,7 @@ input[type=submit]:active {
 
 .btn-full:hover,
 .btn-full:active, {
+    -moz-border: 1px solid #27ae60;
     border: 1px solid #27ae60;
 }
 

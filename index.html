@@ -1,196 +1,456 @@
 <!DOCTYPE html>
-<html data-wf-site="5617972218889afb78848336" data-wf-page="5617972218889afb78848337" lang="pl">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Hammurabi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Webflow">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/hammurabi.webflow.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]
-      }
-    });
-  </script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <style type="text/css">
-    .dish-nav {
-        transition-duration: 0.5s;
-    }
-    /* nav current state*/
-    .w-nav-link.w--current {
-        color: #a47042;
-    }
-    /* Sets containers to 1200px */
-    /*@media screen and (min-width: 1200px) {
-        .w-container {
-            max-width: 1200px;
-        }
-    }*/
-  </style>
+    <meta charset="UTF-8">
+    <meta name="description" content="Zdrowa Szama jest restauracją z pasja i gracją. Dobre jedzenie przyjemniejsze pierdzenie.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zdrowa Szama</title>
+
+    <!-- normalize.css -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+
+    <!-- Responsive Grid System -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+
+    <!-- Ioniconic icons -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="resources/css/styles.css">
+
+    <!-- CSS Queries -->
+    <link rel="stylesheet" href="resources/css/queries.css">
+
+    <!-- Google fonts - Lato -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+
 </head>
-<body class="body">
-  <div class="w-section modal-background">
-    <div class="w-container modal-window"><a href="#" class="close-modal">X</a>
-      <h2 class="reservation-heading">Zarezerwuj Stolik</h2>
-      <div class="icon-container">
-        <p class="line">__________</p>
-        <p class="line line2">__________</p><img width="40" src="images/bell13.svg" class="icon-bell">
-      </div>
-      <div class="w-form form-wrapper">
-        <form id="email-form" name="email-form" data-name="Email Form" class="form">
-          <div class="w-row row">
-            <div class="w-col w-col-4">
-              <label for="Data" class="label">Data*</label>
-              <div class="w-embed textfield-date">
-                <input class="w-input  text-field" type="date" name="date" placeholder="Wpisz datę rezerwacji">
-              </div>
-            </div>
-            <div class="w-col w-col-4">
-              <label for="Godzina" class="label">Godzina*</label>
-              <div class="w-embed">
-                <input class="w-input text-field" type="time" name="time" placeholder="Na którą godzinę?">
-              </div>
-            </div>
-            <div class="w-col w-col-4">
-              <label for="field-2" class="label">Liczba gości*</label>
-              <div class="w-embed">
-                <input class="w-input number text-field" type="number" name="number" placeholder="Wpisz liczbę gości">
-              </div>
-            </div>
-          </div>
-          <div class="w-row row">
-            <div class="w-col w-col-4 w-clearfix">
-              <label for="Data-2" class="label">Imię*</label>
-              <input id="Data-2" type="text" placeholder="Wpisz swoje imię" name="Data-2" data-name="Data 2" required="required" autofocus="autofocus" class="w-input text-field">
-            </div>
-            <div class="w-col w-col-4 w-clearfix">
-              <label for="Nazwisko" class="label">Nazwisko*</label>
-              <input id="Nazwisko" type="text" placeholder="Wpisz swoje nazwisko" name="Nazwisko" data-name="Nazwisko" required="required" class="w-input text-field">
-            </div>
-            <div class="w-col w-col-4">
-              <label for="Telefon-2" class="label">Telefon*</label>
-              <div class="w-embed">
-                <input class="w-input text-field" type="tel" name="telephone" placeholder="Podaj numer telefonu">
-              </div>
-            </div>
-          </div>
-          <div class="w-row row">
-            <div class="w-col w-col-4 w-clearfix">
-              <label for="Email" class="label">Email*</label>
-              <input id="Email" type="email" placeholder="Podaj adres email" name="Email" data-name="Email" required="required" autofocus="autofocus" class="w-input text-field">
-            </div>
-            <div class="w-col w-col-8">
-              <label for="field" class="label">Uwagi(opcjonalnie)</label>
-              <textarea id="field" placeholder="Wpisz wiadomość" name="field" class="w-input textarea"></textarea>
-            </div>
-          </div><a href="#" class="w-button reservation-button modal-link form-btn">Rezerwuje</a>
-        </form>
-        <div class="w-form-done">
-          <p>Thank you! Your submission has been received!</p>
-        </div>
-        <div class="w-form-fail">
-          <p>Oops! Something went wrong while submitting the form</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" data-doc-height="1" class="w-nav left-navigation">
-    <div class="w-container nav-wrapper"><a href="index.html" class="logo">LOGO</a>
-      <nav role="navigation" class="w-nav-menu nav-menu"><a href="menu.html" class="nav-link">Menu</a><a href="galeria.html" class="nav-link">galeria</a><a href="aktualnosci.html" class="nav-link">aktualności</a><a href="o-nas.html" class="nav-link">o nas</a><a href="kontakt.html" class="nav-link">kontakt</a><a href="#" class="w-button reservation-button modal-link">Rezerwacja<br>Stolika</a>
+<body>
+
+   <header>
+      <nav>
+          <div class="row">
+                <a href="#"><img class="logo" src="resources/img/logo.png" alt=""></img></a>
+                <a href="#"><img class="logo-black" src="resources/img/logo-black.png" alt=""></a>
+              <ul class="main-nav js-main-nav">
+                  <li><a href="#features">Jak to działa?</a></li>
+                  <li><a href="#works">Aplikacja </a></li>
+                  <li><a href="#cities">Tu jesteśmy</a></li>
+                  <li><a href="#plans">Plany</a></li>
+              </ul>
+              <a class="mobile-nav-icon js-nav-icon"><i class="ion-navicon-round"></i></a>
+          </div> <!-- end row -->
       </nav>
-      <div class="w-nav-button hamburger-button">
-        <div class="w-icon-nav-menu hamburger-icon"></div>
-      </div>
-    </div>
-    <div class="w-container w-hidden-medium w-hidden-small w-hidden-tiny contact-wrapper">
-      <div class="contact-phone">
-        <div class="fa fa-phone"></div>
-        <p class="contact-paragraph">‍‍555-666-777
-          <br>680-36-45
-          <br>
-        </p>
-      </div>
-      <div class="line-seperator nav"></div>
-      <div class="contact-phone">
-        <div class="fa fa-clock-o"></div>
-        <p class="contact-paragraph">Pon-Pt 8:00 - 22:00
-          <br>Sob-Nd 8:00 - 24:00</p>
-      </div>
-    </div>
-  </div>
-  <div class="hero-section">
-    <div class="w-container hero-header"></div>
-    <div data-animation="slide" data-duration="1000" data-nav-spacing="8" data-delay="6000" data-autoplay="1" data-infinite="1" class="w-slider hero-slider">
-      <div class="w-slider-mask">
-        <div class="w-slide slide">
-          <div class="w-container slider-container">
-            <h1 data-ix="staggered-load" class="hero-header">Restauracja <span class="hero-h1-middle">Hammurabi</span> zaprasza na pyszne jedzenie</h1>
-            <h2 data-ix="staggered-load-2" class="hero-subheader">Zamów online,&nbsp;zadzwoń lub odwiedź nas osobiście :)</h2><a href="menu.html" data-ix="staggered-load-3" class="w-button hero-button menu">Zobacz Menu</a>
-          </div>
+       <div class="hero-text-box">
+            <h1>Lorem ipsum dolor sit amet <br> Lorem ipsum dolor sit.</h1>
+            <a class="btn btn-full js-scroll-to-plans" href="#">Button1 </a>
+            <a class="btn btn-ghost js-scroll-to-features" href="#">Button2  </a>
+       </div>
+   </header>
+
+   <section class="feature-section js-feature-section" id="features">
+       <div class="row">
+           <h2>Header &mdash; lorem ipsum</h2>
+           <p class="long-copy">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, eos dolores vitae? Obcaecati culpa, iusto consequuntur laudantium itaque ea asperiores porro, eaque autem officia, quisquam
+       </div> <!-- end row -->
+
+        <div class="row js-wp-1">
+            <div class="col span-1-of-4 box">
+               <i class="ion-ios-infinite-outline icon-big"></i>
+                <h3>Row 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quos, dolore sequi nostrum odit laudantium tenetur reiciendis harum saepe. Incidunt sequi facere et voluptatum nesciunt, facilis sit perferendis repudiandae nam.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+              <i class="ion-ios-clock-outline icon-big"></i>
+               <h3>Row 2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quos, dolore sequi nostrum odit laudantium tenetur reiciendis harum saepe. Incidunt sequi facere et voluptatum nesciunt, facilis sit perferendis repudiandae nam.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+              <i class="ion-ios-nutrition-outline icon-big"></i>
+               <h3>Row 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quos, dolore sequi nostrum odit laudantium tenetur reiciendis harum saepe. Incidunt sequi facere et voluptatum nesciunt, facilis sit perferendis repudiandae nam.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+              <i class="ion-ios-cart-outline icon-big"></i>
+               <h3>Row 4</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quos, dolore sequi nostrum odit laudantium tenetur reiciendis harum saepe. Incidunt sequi facere et voluptatum nesciunt, facilis sit perferendis repudiandae nam.
+                </p>
+            </div>
+        </div> <!-- end row -->
+   </section>
+
+   <section class="section-meals">
+       <ul class="meals-showcase clearfix">
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/1.jpg" alt="">
+                </figure>
+           </li>
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/2.jpg" alt="">
+                </figure>
+           </li>
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/3.jpg" alt=" ">
+                </figure>
+           </li>
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/4.jpg" alt="">
+                </figure>
+           </li>
+       </ul> <!-- end meals-showcase -->
+       <ul class="meals-showcase clearfix">
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/5.jpg" alt="">
+                </figure>
+           </li>
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/6.jpg" alt="Healthy baguette with egg and vegetables">
+                </figure>
+           </li>
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/7.jpg" alt="">
+                </figure>
+           </li>
+           <li>
+                <figure class="meal-photo">
+                    <img src="resources/img/8.jpg" alt="">
+                </figure>
+           </li>
+       </ul>
+   </section>
+
+   <section class="section-steps" id="works">
+       <div class="row">
+           <h2>Posiadamy aplikację</h2>
+       </div>
+
+       <div class="row">
+           <div class="col span-1-of-2 steps-box">
+               <img src="resources/img/app-iPhone.png" alt="Omnifood iPhone app" class="app-screen js-wp-2">
+           </div>
+           <div class="cols span-2-of-2 steps-box">
+               <div class="works-step">
+                    <div>1</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, odio</p>
+               </div>
+               <div class="works-step">
+                    <div>2</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, odio</p>
+               </div>
+               <div class="works-step">
+                    <div>3</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, odio</p>
+               </div>
+
+                <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App Store Button"></a>
+                <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Play Store Button"></a>
+           </div>
+       </div>
+   </section> <!-- end feature-works -->
+
+
+   <section class="section-cities" id="cities">
+        <div class="row">
+            <h2>Miasta w których się znajdujemy</h2>
         </div>
-        <div class="w-slide slide2">
-          <div class="w-container slider-container">
-            <h1 data-ix="staggered-load" class="hero-header reservation"><span>Zarezerwuj </span>stolik dla siebie i&nbsp;najbliższych</h1>
-            <h2 data-ix="staggered-load-2" class="hero-subheader">Ustal datę, godzinę oraz liczbę osób, a przygotowany stolik będzie na Ciebie czekał</h2><a href="#" class="w-button hero-button reservation modal-link">ZAREZERWUJ&nbsp;</a>
-          </div>
+        <div class="row js-wp-3">
+            <div class="col span-1-of-4 box">
+                <img src="resources/img/lisbon-3.jpg" alt="Lisbon">
+                <h3>Lisbon</h3>
+                <div class="city-features">
+                    <i class="ion-ios-person icon-small"></i>
+                    1600+ Klientów
+                </div>
+                <div class="city-features">
+                    <i class="ion-ios-star icon-small"></i>
+                    60+ Szefów Kuchni
+                </div>
+                <div class="city-features">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@zdrowaszama_lx</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="resources/img/san-francisco.jpg" alt="San Francisco">
+                <h3>San Francisco</h3>
+                <div class="city-features">
+                    <i class="ion-ios-person icon-small"></i>
+                    3700+ Klientów
+                </div>
+                <div class="city-features">
+                    <i class="ion-ios-star icon-small"></i>
+                    160+ Szefów Kuchni
+                </div>
+                <div class="city-features">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@zdrowaszama_sf</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="resources/img/berlin.jpg" alt="Berlin">
+                <h3>Berlin</h3>
+                <div class="city-features">
+                    <i class="ion-ios-person icon-small"></i>
+                    2300+ Klientów
+                </div>
+                <div class="city-features">
+                    <i class="ion-ios-star icon-small"></i>
+                    110+ Szefów Kuchni
+                </div>
+                <div class="city-features">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@zdrowaszama_berlin</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="resources/img/london.jpg" alt="London">
+                <h3>London</h3>
+                <div class="city-features">
+                    <i class="ion-ios-person icon-small"></i>
+                    1200+ klientów
+                </div>
+                <div class="city-features">
+                    <i class="ion-ios-star icon-small"></i>
+                    50+ Szefów Kuchni
+                </div>
+                <div class="city-features">
+                    <i class="ion-social-twitter icon-small"></i>
+                    <a href="#">@zdrowaszama_london</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="w-slider-arrow-left w-hidden-small w-hidden-tiny slider-left-arrow">
-        <div class="w-icon-slider-left hero-slider-arrow"></div>
-      </div>
-      <div class="w-slider-arrow-right w-hidden-small w-hidden-tiny slider-right-arrow">
-        <div class="w-icon-slider-right hero-slider-arrow"></div>
-      </div>
-      <div class="w-slider-nav w-round slider-nav"></div>
-    </div>
-  </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  <script type="text/javascript">
-    $(document).ready(function() {
-        /* Nav – BG color change on scroll - Instantly */
-        /*var scroll_start = 0;
-        var startchange = $('.dish-nav');
-        var offset = startchange.offset();
-        $(document).scroll(function() {
-            scroll_start = $(this).scrollTop();
-        if(scroll_start > offset.top) {
-            $('.dish-nav').css('background-color', 'rgba(34,34,34,0.9)'),
-            $('.dropdown-list').css('background-color', 'rgba(34,34,34,0.9)'),
-            $('.dropdown-link').css('color', '#a47042');
-        } else {
-            $('.dish-nav').css('background-color', '#fff'),
-            $('.dropdown-list').css('background-color', '#fff'),
-            $('.dropdown-link').css('color', '#a47042');
-        }
-        });*/
-       /* Modal Window Pop-Up */
-      $('.modal-link').click(function() {
-        $('.modal-background').fadeIn();
-        return false;
-      });
-      $('.close-modal').click(function() {
-        $('.modal-background').fadeOut();
-        return false;
-      });
-      if (location.hash == '#show-modal') {
-        $('.modal-background').fadeIn();
-      }
-      $('.modal-background').click(function(){
-                $('.modal-background').fadeOut( "slow" );
-            }).children().click(function(){
-                return false;
-      });
-    });
-  </script>
-</body>
+   </section>
+
+   <section class="section-testimonials">
+       <div class="row">
+           <h2>Opinie naszych klientów</h2>
+       </div>
+       <div class="row">
+           <div class="col span-1-of-3">
+               <blockquote>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse velit est unde, exercitationem. Voluptatibus dicta vero sed fuga minus id, porro harum nobis voluptatum nihil debitis dolorum fugit praesentium.
+                    <cite><img src="resources/img/customer-1.jpg" alt="Author Image">Alberto Duncan</cite>
+               </blockquote>
+           </div>
+           <div class="col span-1-of-3">
+               <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse velit est unde, exercitationem. Voluptatibus dicta vero sed fuga minus id, porro harum nobis voluptatum nihil debitis dolorum fugit praesentium.
+                    <cite><img src="resources/img/customer-2.jpg" alt="Author Image">Joana Silva</cite>
+               </blockquote>
+           </div>
+           <div class="col span-1-of-3">
+               <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse velit est unde, exercitationem. Voluptatibus dicta vero sed fuga minus id, porro harum nobis voluptatum nihil debitis dolorum fugit praesentium.
+                    <cite><img src="resources/img/customer-3.jpg" alt="Author Image">Milton Chapman</cite>
+               </blockquote>
+           </div>
+       </div>
+   </section> <!-- end section-testimonials -->
+
+
+   <section class="section-plans js-section-plans" id="plans">
+       <div class="row">
+           <h2>Zacznij jeść zdrowo już dzisiaj</h2>
+       </div>
+       <div class="row">
+           <div class="col span-1-of-3">
+               <div class="plan-box js-wp-4">
+                   <div>
+                       <h3>Premium</h3>
+                       <p class="plan-price">399zł <span>/ miesiąc</span></p>
+                       <p class="plan-price-meal">Lorem ipsum dolor sit amet</p>
+                   </div>
+                   <div>
+                    <ul>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 1</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 2</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 3</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 4</li>
+                    </ul>
+                   </div>
+                   <div>
+                       <a href="#" class="btn btn-full">Zapisz się</a>
+                   </div>
+               </div> <!-- end plan-box -->
+           </div>
+           <div class="col span-1-of-3">
+               <div class="plan-box">
+                   <div>
+                       <h3>Pro</h3>
+                       <p class="plan-price">149zł <span>/ miesiąc</span></p>
+                       <p class="plan-price-meal">Lorem ipsum dolor sit amet</p>
+                   </div>
+                   <div>
+                    <ul>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 1</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 2</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 3</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 4</li>
+                    </ul>
+                   </div>
+                   <div>
+                       <a href="#" class="btn btn-ghost">Zapisz się</a>
+                   </div>
+               </div> <!-- end plan-box -->
+           </div><div class="col span-1-of-3">
+               <div class="plan-box">
+                   <div>
+                       <h3> Starter</h3>
+                       <p class="plan-price">19zł <span>/ posiłek</span></p>
+                       <p class="plan-price-meal">&nbsp;</p>
+                   </div>
+                   <div>
+                    <ul>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 1</li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 2</li>
+                        <li><i class="ion-ios-close-empty icon-small"></i></li>
+                        <li><i class="ion-ios-checkmark-empty icon-small"></i>Row 4</li>
+                    </ul>
+                   </div>
+                   <div>
+                       <a href="#" class="btn btn-ghost">Zapisz się</a>
+                   </div>
+               </div> <!-- end plan-box -->
+           </div>
+       </div> <!-- end row -->
+   </section> <!-- end section-plans -->
+
+
+   <section class="section-form">
+        <div class="row">
+            <h2>W razie jakichkolwiek pytań pisz!</h2>
+        </div>
+        <div class="row">
+            <form method="post" action="#" class="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">Imię</label>
+                    </div>
+                    <div class="colspan-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Twoje imię" required>
+                    </div>
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="colspan-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Twój email" required>
+                    </div>
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="find-us">Jak nas znalazłeś?</label>
+                    </div>
+                    <div class="colspan-2-of-3">
+                        <select name="find-us" id="find-us">
+                            <option value="friends">Znajomi</option>
+                            <option value="search">Google</option>
+                            <option value="ad" selected>Ogłoszenie</option>
+                            <option value="other">Inne</option>
+                        </select>
+                    </div>
+                </div> <!-- end row -->
+                <div class="row newsletter-box">
+                    <div class="col span-1-of-3">
+                        <label for="news">Newsletter?</label>
+                    </div>
+                    <div class="colspan-2-of-3">
+                        <input type="checkbox" name="news" id="news" checked> Tak, poproszę
+                    </div>
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="message">Twoja wiadomość</label>
+                    </div>
+                    <div class="colspan-2-of-3">
+                        <textarea name="message" id="message" placeholder=""></textarea>
+                    </div>
+                </div> <!-- end row -->
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="colspan-2-of-3">
+                        <input type="submit" value="Wyślij!">
+                    </div>
+                </div> <!-- end row -->
+            </form>
+        </div>
+   </section>
+
+
+   <footer>
+       <div class="row">
+           <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">O nas</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Prasa</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+           </div>
+           <div class="colspan-1-of-2">
+               <ul class="social-links">
+                   <li><a href="#"><i class="ion-social-facebook-outline"></i></a></li>
+                   <li><a href="#"><i class="ion-social-twitter-outline"></i></a></li>
+                   <li><a href="#"><i class="ion-social-googleplus-outline"></i> </a></li>
+                   <li><a href="#"><i class="ion-social-instagram-outline"></i> </a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="row">
+           <p>
+               Copyright &copy; by Artur Szynkowski. All rights reserved.
+           </p>
+       </div>
+   </footer>
+
+
+
+
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) -->
+<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+
+<!-- This script is the defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer. -->
+<script src="//cdn.jsdelivr.net/html5shiv/0.2/html5shiv.min.js"></script>
+
+<!-- selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8. -->
+<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+
+
+<!-- include waypoints -->
+<script src="vendors/js/jquery.waypoints.min.js"></script>
+
+
+<script src="resources/js/scripts.js"></script>
+
+
+ </body>
+
 </html>

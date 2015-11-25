@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Tue Nov 24 2015 12:09:52 GMT+0000 (UTC) -->
+<html data-wf-site="5617972218889afb78848336" data-wf-page="561e470823e9af8b34126100" lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/hammurabi.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style type="text/css">
+    .dish-nav {
+        transition-duration: 0.5s;
+    }
+    /* nav current state*/
+    .w-nav-link.w--current {
+        color: #a47042;
+    }
+    /* Sets containers to 1200px */
+    /*@media screen and (min-width: 1200px) {
+        .w-container {
+            max-width: 1200px;
+        }
+    }*/
+  </style>
+</head>
+<body data-ix="display-nav" class="body">
+  <div class="w-section modal-background">
+    <div class="w-container modal-window"><a href="#" class="close-modal">X</a>
+      <h2 class="reservation-heading">Zarezerwuj Stolik</h2>
+      <div class="icon-container">
+        <p class="line">__________</p>
+        <p class="line line2">__________</p><img width="40" src="images/bell13.svg" class="icon-bell">
+      </div>
+      <div class="w-form form-wrapper">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form">
+          <div class="w-row row">
+            <div class="w-col w-col-4">
+              <label for="Data" class="label">Data*</label>
+              <div class="w-embed textfield-date">
+                <input class="w-input  text-field" type="date" name="date" placeholder="Wpisz datę rezerwacji">
+              </div>
+            </div>
+            <div class="w-col w-col-4">
+              <label for="Godzina" class="label">Godzina*</label>
+              <div class="w-embed">
+                <input class="w-input text-field" type="time" name="time" placeholder="Na którą godzinę?">
+              </div>
+            </div>
+            <div class="w-col w-col-4">
+              <label for="field-2" class="label">Liczba gości*</label>
+              <div class="w-embed">
+                <input class="w-input number text-field" type="number" name="number" placeholder="Wpisz liczbę gości">
+              </div>
+            </div>
+          </div>
+          <div class="w-row row">
+            <div class="w-col w-col-4 w-clearfix">
+              <label for="Data-3" class="label">Imię*</label>
+              <input id="Data-3" type="text" placeholder="Wpisz swoje imię" name="Data-3" data-name="Data 3" required="required" autofocus="autofocus" class="w-input text-field">
+            </div>
+            <div class="w-col w-col-4 w-clearfix">
+              <label for="Nazwisko-2" class="label">Nazwisko*</label>
+              <input id="Nazwisko-2" type="text" placeholder="Wpisz swoje nazwisko" name="Nazwisko-2" data-name="Nazwisko 2" required="required" class="w-input text-field">
+            </div>
+            <div class="w-col w-col-4">
+              <label for="Telefon-2" class="label">Telefon*</label>
+              <div class="w-embed">
+                <input class="w-input text-field" type="tel" name="telephone" placeholder="Podaj numer telefonu">
+              </div>
+            </div>
+          </div>
+          <div class="w-row row">
+            <div class="w-col w-col-4 w-clearfix">
+              <label for="Email-2" class="label">Email*</label>
+              <input id="Email-2" type="email" placeholder="Podaj adres email" name="Email-2" data-name="Email 2" required="required" autofocus="autofocus" class="w-input text-field">
+            </div>
+            <div class="w-col w-col-8">
+              <label for="field-2" class="label">Uwagi(opcjonalnie)</label>
+              <textarea id="field-2" placeholder="Wpisz wiadomość" name="field-2" data-name="Field 2" class="w-input textarea"></textarea>
+            </div>
+          </div><a href="#" class="w-button reservation-button modal-link form-btn">Rezerwuje</a>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" data-doc-height="1" class="w-nav left-navigation">
+    <div class="w-container nav-wrapper"><a href="index.html" class="logo">LOGO</a>
+      <nav role="navigation" class="w-nav-menu nav-menu"><a href="menu.html" class="nav-link">Menu</a><a href="galeria.html" class="nav-link">galeria</a><a href="aktualnosci.html" class="nav-link">aktualności</a><a href="o-nas.html" class="nav-link">o nas</a><a href="kontakt.html" class="nav-link">kontakt</a><a href="#" class="w-button reservation-button modal-link">Rezerwacja<br>Stolika</a>
+      </nav>
+      <div class="w-nav-button hamburger-button">
+        <div class="w-icon-nav-menu hamburger-icon"></div>
+      </div>
+    </div>
+    <div class="w-container w-hidden-medium w-hidden-small w-hidden-tiny contact-wrapper">
+      <div class="contact-phone">
+        <div class="fa fa-phone"></div>
+        <p class="contact-paragraph">‍‍555-666-777
+          <br>680-36-45
+          <br>
+        </p>
+      </div>
+      <div class="line-seperator nav"></div>
+      <div class="contact-phone">
+        <div class="fa fa-clock-o"></div>
+        <p class="contact-paragraph">Pon-Pt 8:00 - 22:00
+          <br>Sob-Nd 8:00 - 24:00</p>
+      </div>
+    </div>
+  </div>
+  <div data-ix="display-nav" class="w-container menu-wrapper">
+    <h1 class="dish-header">Menu</h1><img width="60" height="60" src="images/plate24.svg" class="icon-dish">
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav w-hidden-tiny dish-nav mobile">
+      <div class="w-container">
+        <nav role="navigation" data-ix="display-nav" class="w-nav-menu dish-menu">
+          <div data-delay="0" data-ix="dropdown-on-hover" class="w-dropdown dish-dropdown mobile">
+            <div class="w-dropdown-toggle"><a class="dish-link">dania miesne</a>
+              <div class="w-icon-dropdown-toggle icon-dropdown"></div>
+            </div>
+            <nav class="w-dropdown-list dish-dropdown"><a href="#" class="w-dropdown-link dish-link">dania z wołowiny</a><a href="#" class="w-dropdown-link dish-link">Link 2</a><a href="#" class="w-dropdown-link dish-link">Link 3</a>
+            </nav>
+          </div><a href="#Makarony" class="w-nav-link dish-link">makarony</a><a href="#" class="w-nav-link dish-link">pizza</a><a href="#" class="w-nav-link dish-link">naleśniki</a><a href="#" class="w-nav-link dish-link">napoje</a>
+        </nav>
+        <div class="w-nav-button dish-mobile-button">
+          <div class="w-icon-nav-menu dish-nav-icon"></div>
+        </div>
+        <h3 class="w-hidden-main dish-menu-header">Zobacz menu</h3>
+      </div>
+    </div>
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" class="w-nav w-hidden-main w-hidden-medium dish-nav mobileview">
+      <div class="w-container">
+        <nav role="navigation" data-ix="display-nav" class="w-nav-menu dish-menu">
+          <div data-delay="0" class="w-dropdown dish-dropdown mobileview">
+            <div class="w-dropdown-toggle"><a class="dish-link">dania miesne</a>
+              <div class="w-icon-dropdown-toggle icon-dropdown"></div>
+            </div>
+            <nav class="w-dropdown-list dish-dropdown"><a href="#" class="w-dropdown-link dish-link">dania z wołowiny</a><a href="#" class="w-dropdown-link dish-link">Link 2</a><a href="#" class="w-dropdown-link dish-link">Link 3</a>
+            </nav>
+          </div><a href="#Makarony" class="w-nav-link dish-link">makarony</a><a href="#" class="w-nav-link dish-link">pizza</a><a href="#" class="w-nav-link dish-link">naleśniki</a><a href="#" class="w-nav-link dish-link">napoje</a>
+        </nav>
+        <div class="w-nav-button dish-mobile-button">
+          <div class="w-icon-nav-menu dish-nav-icon"></div>
+        </div>
+        <h3 class="w-hidden-main dish-menu-header">Zobacz menu</h3>
+      </div>
+    </div>
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" data-ix="display-none" class="w-nav dish-nav-scroll">
+      <div class="w-container dish-nav-scroll-container">
+        <nav role="navigation" class="w-nav-menu dish-menu-scroll">
+          <div data-delay="0" class="w-dropdown dish-scroll-dropdown mobileview">
+            <div class="w-dropdown-toggle"><a href="#Dania-Miesne" class="dish-link">dania miesne</a>
+              <div class="w-icon-dropdown-toggle icon-dropdown"></div>
+            </div>
+            <nav class="w-dropdown-list dish-dropdown scroll"><a href="#" class="w-dropdown-link dish-link">Link 1</a><a href="#" class="w-dropdown-link dish-link">Link 2</a><a href="#" class="w-dropdown-link dish-link">Link 3</a>
+            </nav>
+          </div><a href="#Makarony" class="w-nav-link dish-link">makarony</a><a href="#" class="w-nav-link dish-link">pizza</a><a href="#" class="w-nav-link dish-link">naleśniki</a><a href="#" class="w-nav-link dish-link">napoje</a>
+        </nav>
+        <div class="w-nav-button dish-mobile-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+        <h3 class="w-hidden-main dish-menu-header">Zobacz menu</h3>
+      </div>
+    </div>
+  </div>
+  <div class="w-container menu-table">
+    <div id="Dania-Miesne" data-ix="display-nav" class="w-section menu-dishes meat">
+      <h2 class="dusih-sub-header"><span class="dish-sub-header-bg">dania mięsne</span></h2>
+    </div>
+    <h2 class="dishes-header">Dania z wołowiny (180g)</h2>
+    <div class="line-seperator"></div>
+    <p class="dish-description">W zestawie do wyboru: frytki, pieczone ziemniaki lub ryz (150<span class="gram">g</span>)
+      <br>oraz surówka (150<span class="gram">g</span>), trzy sosy i chleb pita&nbsp;</p>
+    <div class="w-row dishes-first-row">
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img first">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">STEK&nbsp;Z&nbsp;WARZYWAMI</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Wołowina, ziemniaki zapiekane, sałatka cezar</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img second">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header multiple-line">PENE WEGETARIAŃSKIE <br>     ZAPIECZONE SEREM</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Mix sałat, sos vinegrete, grzanki, pomidorki koktajlowe</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img third">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">SAŁATKA CEZAR</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Mix sałat, sos vinegrete, grzanki, pomidorki koktajlowe</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+    </div>
+    <div class="w-row dishes-first-row">
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img first">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">STEK&nbsp;Z&nbsp;WARZYWAMI</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Wołowina, ziemniaki zapiekane, sałatka cezar</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img second">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">STEK&nbsp;Z&nbsp;WARZYWAMI</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Wołowina, ziemniaki zapiekane, sałatka cezar</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img third">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">STEK&nbsp;Z&nbsp;WARZYWAMI</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Wołowina, ziemniaki zapiekane, sałatka cezar</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container menu-table">
+    <h2 class="dishes-header">Dania z wieprzowiny (180g)</h2>
+    <div class="line-seperator"></div>
+    <p class="dish-description">W zestawie do wyboru: frytki, pieczone ziemniaki lub ryz (150<span class="gram">g</span>)
+      <br>oraz surówka (150<span class="gram">g</span>), trzy sosy i chleb pita&nbsp;</p>
+    <div class="w-row dishes-first-row">
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img first">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">STEK&nbsp;Z&nbsp;WARZYWAMI</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Wołowina, ziemniaki zapiekane, sałatka cezar</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img second">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header multiple-line">PENE WEGETARIAŃSKIE <br>     ZAPIECZONE SEREM</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Mix sałat, sos vinegrete, grzanki, pomidorki koktajlowe</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img third">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">SAŁATKA CEZAR</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Mix sałat, sos vinegrete, grzanki, pomidorki koktajlowe</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-container menu-table">
+    <div class="w-section menu-dishes pasta">
+      <h2 class="dusih-sub-header"><span class="dish-sub-header-bg">makarony</span></h2>
+    </div>
+    <h2 class="dishes-header">makarony</h2>
+    <div class="line-seperator"></div>
+    <p class="dish-description">W zestawie do wyboru: frytki, pieczone ziemniaki lub ryz (150<span class="gram">g</span>)
+      <br>oraz surówka (150<span class="gram">g</span>), trzy sosy i chleb pita&nbsp;</p>
+    <div id="Makarony" class="w-row dishes-first-row">
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img first">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">STEK&nbsp;Z&nbsp;WARZYWAMI</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Wołowina, ziemniaki zapiekane, sałatka cezar</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img second">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header multiple-line">PENE WEGETARIAŃSKIE <br>     ZAPIECZONE SEREM</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Mix sałat, sos vinegrete, grzanki, pomidorki koktajlowe</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="dish-wrapper">
+          <div class="dish-img third">
+            <div class="border-container"></div>
+          </div>
+          <h4 class="block-header">SAŁATKA CEZAR</h4>
+          <div class="line-seperator dish"></div>
+          <p class="dish-description sub">Mix sałat, sos vinegrete, grzanki, pomidorki koktajlowe</p>
+          <p class="dish-price">25, 00zł</p>
+          <a href="#" class="fa fa-plus-circle"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="w-inline-block"></a>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        /* Nav – BG color change on scroll - Instantly */
+        /*var scroll_start = 0;
+        var startchange = $('.dish-nav');
+        var offset = startchange.offset();
+        $(document).scroll(function() { 
+            scroll_start = $(this).scrollTop();
+        if(scroll_start > offset.top) {
+            $('.dish-nav').css('background-color', 'rgba(34,34,34,0.9)'),
+            $('.dropdown-list').css('background-color', 'rgba(34,34,34,0.9)'),
+            $('.dropdown-link').css('color', '#a47042');
+        } else {
+            $('.dish-nav').css('background-color', '#fff'),
+            $('.dropdown-list').css('background-color', '#fff'),
+            $('.dropdown-link').css('color', '#a47042');
+        }
+        });*/
+       /* Modal Window Pop-Up */
+      $('.modal-link').click(function() {
+        $('.modal-background').fadeIn();
+        return false;
+      });
+      $('.close-modal').click(function() {
+        $('.modal-background').fadeOut();
+        return false;
+      });
+      if (location.hash == '#show-modal') {
+        $('.modal-background').fadeIn();
+      }
+      $('.modal-background').click(function(){
+                $('.modal-background').fadeOut( "slow" );
+            }).children().click(function(){
+                return false;
+      });
+    });
+  </script>
+</body>
+</html>

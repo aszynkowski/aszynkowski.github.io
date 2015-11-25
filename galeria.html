@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Tue Nov 24 2015 12:09:51 GMT+0000 (UTC) -->
+<html data-wf-site="5617972218889afb78848336" data-wf-page="5638e967bea45f877ea23af1" lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Galeria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/hammurabi.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style type="text/css">
+    .dish-nav {
+        transition-duration: 0.5s;
+    }
+    /* nav current state*/
+    .w-nav-link.w--current {
+        color: #a47042;
+    }
+    /* Sets containers to 1200px */
+    /*@media screen and (min-width: 1200px) {
+        .w-container {
+            max-width: 1200px;
+        }
+    }*/
+  </style>
+</head>
+<body class="body">
+  <div class="w-section modal-background">
+    <div class="w-container modal-window"><a href="#" class="close-modal">X</a>
+      <h2 class="reservation-heading">Zarezerwuj Stolik</h2>
+      <div class="icon-container">
+        <p class="line">__________</p>
+        <p class="line line2">__________</p><img width="40" src="images/bell13.svg" class="icon-bell">
+      </div>
+      <div class="w-form form-wrapper">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form">
+          <div class="w-row row">
+            <div class="w-col w-col-4">
+              <label for="Data" class="label">Data*</label>
+              <div class="w-embed textfield-date">
+                <input class="w-input  text-field" type="date" name="date" placeholder="Wpisz datę rezerwacji">
+              </div>
+            </div>
+            <div class="w-col w-col-4">
+              <label for="Godzina" class="label">Godzina*</label>
+              <div class="w-embed">
+                <input class="w-input text-field" type="time" name="time" placeholder="Na którą godzinę?">
+              </div>
+            </div>
+            <div class="w-col w-col-4">
+              <label for="field-2" class="label">Liczba gości*</label>
+              <div class="w-embed">
+                <input class="w-input number text-field" type="number" name="number" placeholder="Wpisz liczbę gości">
+              </div>
+            </div>
+          </div>
+          <div class="w-row row">
+            <div class="w-col w-col-4 w-clearfix">
+              <label for="Data-3" class="label">Imię*</label>
+              <input id="Data-3" type="text" placeholder="Wpisz swoje imię" name="Data-3" data-name="Data 3" required="required" autofocus="autofocus" class="w-input text-field">
+            </div>
+            <div class="w-col w-col-4 w-clearfix">
+              <label for="Nazwisko-2" class="label">Nazwisko*</label>
+              <input id="Nazwisko-2" type="text" placeholder="Wpisz swoje nazwisko" name="Nazwisko-2" data-name="Nazwisko 2" required="required" class="w-input text-field">
+            </div>
+            <div class="w-col w-col-4">
+              <label for="Telefon-2" class="label">Telefon*</label>
+              <div class="w-embed">
+                <input class="w-input text-field" type="tel" name="telephone" placeholder="Podaj numer telefonu">
+              </div>
+            </div>
+          </div>
+          <div class="w-row row">
+            <div class="w-col w-col-4 w-clearfix">
+              <label for="Email-2" class="label">Email*</label>
+              <input id="Email-2" type="email" placeholder="Podaj adres email" name="Email-2" data-name="Email 2" required="required" autofocus="autofocus" class="w-input text-field">
+            </div>
+            <div class="w-col w-col-8">
+              <label for="field-2" class="label">Uwagi(opcjonalnie)</label>
+              <textarea id="field-2" placeholder="Wpisz wiadomość" name="field-2" data-name="Field 2" class="w-input textarea"></textarea>
+            </div>
+          </div><a href="#" class="w-button reservation-button modal-link form-btn">Rezerwuje</a>
+        </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-collapse="medium" data-animation="default" data-duration="400" data-contain="1" data-doc-height="1" class="w-nav left-navigation">
+    <div class="w-container nav-wrapper"><a href="index.html" class="logo">LOGO</a>
+      <nav role="navigation" class="w-nav-menu nav-menu"><a href="menu.html" class="nav-link">Menu</a><a href="galeria.html" class="nav-link">galeria</a><a href="aktualnosci.html" class="nav-link">aktualności</a><a href="o-nas.html" class="nav-link">o nas</a><a href="kontakt.html" class="nav-link">kontakt</a><a href="#" class="w-button reservation-button modal-link">Rezerwacja<br>Stolika</a>
+      </nav>
+      <div class="w-nav-button hamburger-button">
+        <div class="w-icon-nav-menu hamburger-icon"></div>
+      </div>
+    </div>
+    <div class="w-container w-hidden-medium w-hidden-small w-hidden-tiny contact-wrapper">
+      <div class="contact-phone">
+        <div class="fa fa-phone"></div>
+        <p class="contact-paragraph">‍‍555-666-777
+          <br>680-36-45
+          <br>
+        </p>
+      </div>
+      <div class="line-seperator nav"></div>
+      <div class="contact-phone">
+        <div class="fa fa-clock-o"></div>
+        <p class="contact-paragraph">Pon-Pt 8:00 - 22:00
+          <br>Sob-Nd 8:00 - 24:00</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-section page-header">
+    <div class="w-container container-heading">
+      <h1 class="section-header"><span class="header-line gallery">______</span>galeria<span class="header-line gallery">______</span></h1>
+      <div class="fa fa-camera"></div>
+    </div>
+  </div>
+  <div class="w-section section">
+    <div data-duration-in="300" data-duration-out="100" class="w-tabs gallery-tabs">
+      <div class="w-tab-menu gallery-tabs-menu">
+        <a data-w-tab="Tab 1" class="w-tab-link w-inline-block w--current gallery-tab-button">
+          <div>Wszystkie</div>
+        </a>
+        <a data-w-tab="Tab 2" class="w-tab-link w-inline-block gallery-tab-button">
+          <div>wnętrze</div>
+        </a>
+        <a data-w-tab="Tab 3" class="w-tab-link w-inline-block gallery-tab-button">
+          <div>dania</div>
+        </a>
+        <a data-w-tab="Tab 4" class="w-tab-link w-inline-block gallery-tab-button">
+          <div>eventy</div>
+        </a>
+      </div>
+      <div class="w-tab-content tabs-content">
+        <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+          <div class="w-row gallery-row">
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/6515309547_8b22aa233d_o-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi gallery", "items": [{
+                      "url": "images/6515309547_8b22aa233d_o-min.jpg",
+                      "fileName": "562a03d4752321c31a5e1e2d_6515309547_8b22aa233d_o-min.jpg",
+                      "origFileName": "6515309547_8b22aa233d_o-min.jpg",
+                      "width": 4752,
+                      "height": 3168,
+                      "size": 1449003,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/bacon-avocado-salad-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi gallery", "items": [{
+                      "url": "images/bacon-avocado-salad-min.jpg",
+                      "fileName": "5624c627932c368504a4afe8_bacon-avocado-salad-min.jpg",
+                      "origFileName": "bacon-avocado-salad-min.jpg",
+                      "width": 5000,
+                      "height": 3333,
+                      "size": 528705,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img alt="hammurabi gallery" src="images/photo-1430931071372-38127bd472b8-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi gallery", "items": [{
+                      "url": "images/photo-1430931071372-38127bd472b8-min.jpg",
+                      "fileName": "5617b0a318889afb788487ce_photo-1430931071372-38127bd472b8-min.jpg",
+                      "origFileName": "photo-1430931071372-38127bd472b8-min.jpg",
+                      "width": 2000,
+                      "height": 1339,
+                      "size": 1452083,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-row gallery-row second">
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/food-plate-rucola-salad-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi gallery", "items": [{
+                      "id": "5627764f595f80b338f5d533",
+                      "url": "images/food-plate-rucola-salad-min.jpg",
+                      "fileName": "example-bg.png",
+                      "origFileName": "example-bg.png",
+                      "width": 250,
+                      "height": 250,
+                      "size": 3618,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/photo-1432139555190-58524dae6a55-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi gallery", "items": [{
+                      "id": "56262a3999846e281354daf0",
+                      "url": "images/photo-1432139555190-58524dae6a55-min.jpg",
+                      "fileName": "example-bg.png",
+                      "origFileName": "example-bg.png",
+                      "width": 250,
+                      "height": 250,
+                      "size": 3618,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block"></div>
+            </div>
+          </div>
+        </div>
+        <div data-w-tab="Tab 2" class="w-tab-pane">
+          <div class="w-row gallery-row">
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/6515309547_8b22aa233d_o-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi wnetrze", "items": [{
+                      "url": "images/6515309547_8b22aa233d_o-min.jpg",
+                      "fileName": "6515309547_8b22aa233d_o-min.jpg",
+                      "origFileName": "6515309547_8b22aa233d_o-min.jpg",
+                      "width": 4752,
+                      "height": 3168,
+                      "size": 1449003,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img alt="hammurabi gallery" src="images/photo-1430931071372-38127bd472b8-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi wnetrze", "items": [{
+                      "url": "images/photo-1430931071372-38127bd472b8-min.jpg",
+                      "fileName": "5617b0a318889afb788487ce_photo-1430931071372-38127bd472b8-min.jpg",
+                      "origFileName": "photo-1430931071372-38127bd472b8-min.jpg",
+                      "width": 2000,
+                      "height": 1339,
+                      "size": 1452083,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block"></div>
+            </div>
+          </div>
+        </div>
+        <div data-w-tab="Tab 3" class="w-tab-pane">
+          <div class="w-row gallery-row">
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/food-plate-rucola-salad-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi dania", "items": [{
+                      "url": "images/food-plate-rucola-salad-min.jpg",
+                      "fileName": "5627764f595f80b338f5d533_food-plate-rucola-salad-min.jpg",
+                      "origFileName": "food-plate-rucola-salad-min.jpg",
+                      "width": 4104,
+                      "height": 2736,
+                      "size": 360274,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img alt="hammurabi gallery" src="images/photo-1432139555190-58524dae6a55-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi dania", "items": [{
+                      "id": "56262a3999846e281354daf0",
+                      "url": "images/photo-1432139555190-58524dae6a55-min.jpg",
+                      "fileName": "example-bg.png",
+                      "origFileName": "example-bg.png",
+                      "width": 250,
+                      "height": 250,
+                      "size": 3618,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img alt="hammurabi gallery" src="images/bacon-avocado-salad-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi dania", "items": [{
+                      "id": "5624c627932c368504a4afe8",
+                      "url": "images/bacon-avocado-salad-min.jpg",
+                      "fileName": "example-bg.png",
+                      "origFileName": "example-bg.png",
+                      "width": 250,
+                      "height": 250,
+                      "size": 3618,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-w-tab="Tab 4" class="w-tab-pane">
+          <div class="w-row gallery-row">
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img src="images/food-plate-rucola-salad-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi dania", "items": [{
+                      "url": "images/food-plate-rucola-salad-min.jpg",
+                      "fileName": "5627764f595f80b338f5d533_food-plate-rucola-salad-min.jpg",
+                      "origFileName": "food-plate-rucola-salad-min.jpg",
+                      "width": 4104,
+                      "height": 2736,
+                      "size": 360274,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img alt="hammurabi gallery" src="images/photo-1432139555190-58524dae6a55-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi dania", "items": [{
+                      "id": "56262a3999846e281354daf0",
+                      "url": "images/photo-1432139555190-58524dae6a55-min.jpg",
+                      "fileName": "example-bg.png",
+                      "origFileName": "example-bg.png",
+                      "width": 250,
+                      "height": 250,
+                      "size": 3618,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+            <div class="w-col w-col-4 gallery-column">
+              <div class="gallery-div-block">
+                <a href="#" class="w-lightbox w-inline-block gallery-lightbox-link"><img alt="hammurabi gallery" src="images/bacon-avocado-salad-min.jpg" class="gallery-lightbox-image">
+                  <script type="application/json" class="w-json">
+                    { "group": "hammurabi dania", "items": [{
+                      "id": "5624c627932c368504a4afe8",
+                      "url": "images/bacon-avocado-salad-min.jpg",
+                      "fileName": "example-bg.png",
+                      "origFileName": "example-bg.png",
+                      "width": 250,
+                      "height": 250,
+                      "size": 3618,
+                      "type": "image"
+                    }] }
+                  </script>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        /* Nav – BG color change on scroll - Instantly */
+        /*var scroll_start = 0;
+        var startchange = $('.dish-nav');
+        var offset = startchange.offset();
+        $(document).scroll(function() { 
+            scroll_start = $(this).scrollTop();
+        if(scroll_start > offset.top) {
+            $('.dish-nav').css('background-color', 'rgba(34,34,34,0.9)'),
+            $('.dropdown-list').css('background-color', 'rgba(34,34,34,0.9)'),
+            $('.dropdown-link').css('color', '#a47042');
+        } else {
+            $('.dish-nav').css('background-color', '#fff'),
+            $('.dropdown-list').css('background-color', '#fff'),
+            $('.dropdown-link').css('color', '#a47042');
+        }
+        });*/
+       /* Modal Window Pop-Up */
+      $('.modal-link').click(function() {
+        $('.modal-background').fadeIn();
+        return false;
+      });
+      $('.close-modal').click(function() {
+        $('.modal-background').fadeOut();
+        return false;
+      });
+      if (location.hash == '#show-modal') {
+        $('.modal-background').fadeIn();
+      }
+      $('.modal-background').click(function(){
+                $('.modal-background').fadeOut( "slow" );
+            }).children().click(function(){
+                return false;
+      });
+    });
+  </script>
+</body>
+</html>
